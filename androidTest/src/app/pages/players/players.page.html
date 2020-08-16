@@ -4,21 +4,42 @@
             <ion-menu-button></ion-menu-button>
         </ion-buttons>
         <ion-title>
-            Jugadores
+            Movies
         </ion-title>
     </ion-toolbar>
 </ion-header>
 
 <ion-content>
+
+
+    <!--        SWIPE DOWN REFRESH-->
+    <ion-refresher slot="fixed" (ionRefresh)="doRefresh($event)">
+        <ion-refresher-content refreshingSpinner="crescent"></ion-refresher-content>
+    </ion-refresher>
+
+    <!--        SPINNER-->
+    <ion-grid *ngIf="spinner">
+        <ion-row class="ion-justify-content-center">
+            <ion-col size="12" class="ion-text-center">
+                <ion-spinner color="primary" name="crescent"></ion-spinner>
+            </ion-col>
+        </ion-row>
+    </ion-grid>
+
     <ion-row class="ion-margin-top">
-        <ion-col size-xs="4" size-md="3" size-lg="2" class="ion-text-center ion-activatable ripple-parent" (click)="playerDetails()">
+        <ion-col *ngFor="let movie of movies" size-xs="4" size-md="3" size-lg="2" class="ion-text-center ion-activatable ripple-parent" (click)="playerDetails(movie)">
             <div class="player-item push-center"
-                 [style]="'assets/images/venados_merida.png' | domSanitizerImage"></div>
+                 [ngStyle]="{'background-image': 'url(' + baseUrlImg + movie.backdrop_path + ')'}"></div>
             <ion-label>
-                Jugador
+                {{movie.title}}
             </ion-label>
             <ion-ripple-effect class="rounded"></ion-ripple-effect>
         </ion-col>
     </ion-row>
+
+
+    <ion-infinite-scroll threshold="100px" (ionInfinite)="getGames($event)">
+        <ion-infinite-scroll-content loadingSpinner="dots"> </ion-infinite-scroll-content>
+    </ion-infinite-scroll>
 
 </ion-content>

@@ -8,9 +8,9 @@ import {StatusBar} from '@ionic-native/status-bar/ngx';
 
 import {AppComponent} from './app.component';
 import {AppRoutingModule} from './app-routing.module';
+import {HTTP_INTERCEPTORS, HttpClientModule} from '@angular/common/http';
 
 import {ShareModule} from '@shared/share.module';
-import {HTTP_INTERCEPTORS} from '@angular/common/http';
 
 import {InterceptorService} from '@interceptors/interceptor';
 
@@ -21,7 +21,8 @@ import {InterceptorService} from '@interceptors/interceptor';
         BrowserModule,
         IonicModule.forRoot(),
         AppRoutingModule,
-        ShareModule
+        ShareModule,
+        HttpClientModule
     ],
     providers: [
         StatusBar,

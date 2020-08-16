@@ -7,7 +7,7 @@ import {ModalController} from '@ionic/angular';
     styleUrls: ['./player.page.scss'],
 })
 export class PlayerPage implements OnInit {
-    @Input() player;
+    @Input() movie;
 
     constructor(
         public modalController: ModalController
@@ -15,6 +15,7 @@ export class PlayerPage implements OnInit {
     }
 
     ngOnInit() {
+        console.log(this.movie);
     }
 
 }

@@ -6,7 +6,8 @@
       "@shared/*": ["src/app/shared/*"],
       "@pages/*": ["src/app/pages/*"],
       "@services/*": ["src/app/services/*"],
-      "@interceptors/*": ["src/app/interceptors/*"]
+      "@interceptors/*": ["src/app/interceptors/*"],
+      "@interfaces/*": ["src/app/interfaces/*"]
     },
     "outDir": "./dist/out-tsc",
     "sourceMap": true,

@@ -8,6 +8,20 @@
 
 <ion-content [fullscreen]="true">
 
+    <!--        SWIPE DOWN REFRESH-->
+    <ion-refresher slot="fixed" (ionRefresh)="doRefresh($event)">
+        <ion-refresher-content refreshingSpinner="crescent"></ion-refresher-content>
+    </ion-refresher>
+
+    <!--        SPINNER-->
+    <ion-grid *ngIf="spinner">
+        <ion-row class="ion-justify-content-center">
+            <ion-col size="12" class="ion-text-center">
+                <ion-spinner color="primary" name="crescent"></ion-spinner>
+            </ion-col>
+        </ion-row>
+    </ion-grid>
+
     <ion-grid>
         <ion-row class="ion-justify-content-center">
             <ion-col size="12">

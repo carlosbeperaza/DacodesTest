@@ -27,6 +27,8 @@ export class InterceptorService implements HttpInterceptor {
             catchError(err => {
                 if (err.status === 404) {
                     this.toastService.presentToast('Not found', 'bottom', 'medium');
+                } else {
+                    this.toastService.presentToast('Something happened, try again.', 'bottom', 'medium');
                 }
 
                 return throwError(err);
