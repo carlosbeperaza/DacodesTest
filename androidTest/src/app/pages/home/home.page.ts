@@ -2,7 +2,7 @@ import {Component, OnInit} from '@angular/core';
 
 import {HttpService} from '@services/http.service';
 import {ResponseInterface} from '@interfaces/response.interface';
-import {MovieInterface} from '@interfaces/movie.interface';
+import {GameInterface} from '@interfaces/game.interface';
 
 @Component({
     selector: 'app-home',
@@ -11,7 +11,7 @@ import {MovieInterface} from '@interfaces/movie.interface';
 })
 export class HomePage implements OnInit {
     gamesSegment = 'COM';
-    movies: MovieInterface[] = [];
+    games: GameInterface[] = [];
     spinner = true;
 
     constructor(
@@ -24,15 +24,11 @@ export class HomePage implements OnInit {
     }
 
     async getGames() {
-        return await this.http.get('now_playing')
-            .then((response: ResponseInterface) => {
-                this.movies = response.results;
-            })
-            .finally(() => this.spinner = false);
+        this.spinner = false;
     }
 
     doRefresh(event: any) {
-        this.movies = [];
-        this.getGames().finally(() => event.target.complete());
+        this.games = [];
+        event.target.complete();
     }
 }

@@ -29,11 +29,11 @@ export class PlayersPage implements OnInit {
     }
 
 
-    async playerDetails(movie) {
+    async playerDetails(movie: MovieInterface) {
         const modal = await this.modalController.create({
             component: PlayerPage,
             componentProps: {
-                movie: movie,
+                theMovie: movie,
             }
         });
         return await modal.present();

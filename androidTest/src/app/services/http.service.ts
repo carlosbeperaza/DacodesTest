@@ -13,5 +13,7 @@ export class HttpService {
     constructor(private http: HttpClient) {
     }
 
-    get = async (url: string, page: number) => await this.http.get(`${this.URL_API}/${url}?api_key=${(this.API_KEY)}&page=${page}`).toPromise();
+    get = async (url: string, page: number) => await this.http.get(`${this.URL_API}/${url}?api_key=${this.API_KEY}&page=${page}&language=es-MX`).toPromise();
+
+    getById = async (id: number) => await this.http.get(`${this.URL_API}/${id}?api_key=${this.API_KEY}&language=es-MX`).toPromise();
 }
