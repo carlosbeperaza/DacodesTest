@@ -4,6 +4,8 @@ import {Platform} from '@ionic/angular';
 import {SplashScreen} from '@ionic-native/splash-screen/ngx';
 import {StatusBar} from '@ionic-native/status-bar/ngx';
 
+import {pages} from '@shared/data/pages';
+
 @Component({
     selector: 'app-root',
     templateUrl: 'app.component.html',
@@ -11,23 +13,7 @@ import {StatusBar} from '@ionic-native/status-bar/ngx';
 })
 export class AppComponent implements OnInit {
     public selectedIndex = 0;
-    public appPages = [
-        {
-            title: 'Home',
-            url: '/folder/Inbox',
-            icon: 'home'
-        },
-        {
-            title: 'Statistics',
-            url: '/folder/Outbox',
-            icon: 'receipt'
-        },
-        {
-            title: 'Players',
-            url: '/folder/Favorites',
-            icon: 'football'
-        },
-    ];
+    public appPages = pages;
 
     constructor(
         private platform: Platform,

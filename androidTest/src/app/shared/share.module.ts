@@ -1,8 +1,9 @@
 import {NgModule} from '@angular/core';
 import {CommonModule} from '@angular/common';
 import {RouterModule} from '@angular/router';
-import {DomSanitizerImagePipe} from './pipes/dom-sanitizer-image.pipe';
 import {IonicModule} from '@ionic/angular';
+
+import {DomSanitizerImagePipe} from '@shared/pipes/dom-sanitizer-image.pipe';
 
 
 @NgModule({

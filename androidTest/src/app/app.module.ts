@@ -8,7 +8,8 @@ import {StatusBar} from '@ionic-native/status-bar/ngx';
 
 import {AppComponent} from './app.component';
 import {AppRoutingModule} from './app-routing.module';
-import {ShareModule} from './shared/share.module';
+
+import {ShareModule} from '@shared/share.module';
 
 @NgModule({
     declarations: [AppComponent],
