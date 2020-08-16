@@ -4,7 +4,9 @@
     "baseUrl": "./",
     "paths": {
       "@shared/*": ["src/app/shared/*"],
-      "@pages/*": ["src/app/pages/*"]
+      "@pages/*": ["src/app/pages/*"],
+      "@services/*": ["src/app/services/*"],
+      "@interceptors/*": ["src/app/interceptors/*"]
     },
     "outDir": "./dist/out-tsc",
     "sourceMap": true,

@@ -10,6 +10,9 @@ import {AppComponent} from './app.component';
 import {AppRoutingModule} from './app-routing.module';
 
 import {ShareModule} from '@shared/share.module';
+import {HTTP_INTERCEPTORS} from '@angular/common/http';
+
+import {InterceptorService} from '@interceptors/interceptor';
 
 @NgModule({
     declarations: [AppComponent],
@@ -23,7 +26,8 @@ import {ShareModule} from '@shared/share.module';
     providers: [
         StatusBar,
         SplashScreen,
-        {provide: RouteReuseStrategy, useClass: IonicRouteStrategy}
+        {provide: RouteReuseStrategy, useClass: IonicRouteStrategy},
+        { provide: HTTP_INTERCEPTORS, useClass: InterceptorService, multi: true },
     ],
     bootstrap: [AppComponent]
 })
