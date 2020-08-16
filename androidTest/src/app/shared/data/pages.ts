@@ -11,7 +11,7 @@ export const pages = [
     },
     {
         title: 'Players',
-        url: '/folder/Favorites',
+        url: '/players',
         icon: 'football'
     },
 ];

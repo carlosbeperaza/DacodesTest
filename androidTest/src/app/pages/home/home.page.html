@@ -7,8 +7,6 @@
 </ion-header>
 
 <ion-content [fullscreen]="true">
-    <ion-header collapse="condense">
-    </ion-header>
 
     <ion-grid>
         <ion-row class="ion-justify-content-center">
@@ -20,7 +18,7 @@
     </ion-grid>
 
 
-    <ion-segment color="primary" [(ngModel)]="gamesSegment">
+    <ion-segment color="primary" [(ngModel)]="gamesSegment" mode="md">
         <ion-segment-button value="COM">
             <ion-label>COPA MX</ion-label>
             <ion-icon name="medal-outline"></ion-icon>
@@ -35,7 +33,7 @@
 
         <ng-container *ngSwitchCase="'COM'">
 
-            <ion-list>
+            <ion-list mode="md">
 
                 <ng-container>
                     <ion-list-header lines="none" color="medium">

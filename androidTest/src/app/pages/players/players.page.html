@@ -1,0 +1,24 @@
+<ion-header [translucent]="true">
+    <ion-toolbar>
+        <ion-buttons slot="start">
+            <ion-menu-button></ion-menu-button>
+        </ion-buttons>
+        <ion-title>
+            Jugadores
+        </ion-title>
+    </ion-toolbar>
+</ion-header>
+
+<ion-content>
+    <ion-row class="ion-margin-top">
+        <ion-col size-xs="4" size-md="3" size-lg="2" class="ion-text-center ion-activatable ripple-parent" (click)="playerDetails()">
+            <div class="player-item push-center"
+                 [style]="'assets/images/venados_merida.png' | domSanitizerImage"></div>
+            <ion-label>
+                Jugador
+            </ion-label>
+            <ion-ripple-effect class="rounded"></ion-ripple-effect>
+        </ion-col>
+    </ion-row>
+
+</ion-content>

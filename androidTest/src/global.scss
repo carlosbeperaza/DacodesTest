@@ -57,3 +57,22 @@
 .text-marc {
   font-size: 30px !important;
 }
+
+.player-item {
+  width: 100px;
+  height: 100px;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  -moz-border-radius: 50px !important;
+  -webkit-border-radius: 50px !important;
+  border-radius: 50px !important;
+}
+
+.rounded {
+
+  -moz-border-radius: 10% !important;
+  -webkit-border-radius: 10% !important;
+  border-radius: 10% !important;
+
+}
