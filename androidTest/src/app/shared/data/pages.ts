@@ -6,7 +6,7 @@ export const pages = [
     },
     {
         title: 'Statistics',
-        url: '/folder/Outbox',
+        url: '/statistics',
         icon: 'receipt'
     },
     {
