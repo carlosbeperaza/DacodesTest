@@ -29,8 +29,31 @@
 .back-img {
   width: 100px;
   height: 100px;
-  //background-image: url('/assets/images/soccer.svg');
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
+}
+
+.item-back-img {
+  width: 60px;
+  height: 60px;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.back-img-home {
+  width: 200px;
+  height: 200px;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.push-center {
+  margin: 0 auto;
+}
+
+.text-marc {
+  font-size: 30px !important;
 }
