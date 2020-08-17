@@ -4,14 +4,17 @@ import {RouterModule} from '@angular/router';
 import {IonicModule} from '@ionic/angular';
 
 import {DomSanitizerImagePipe} from '@shared/pipes/dom-sanitizer-image.pipe';
+import {GendersPipe} from '@shared/pipes/joinArray.pipe';
 
 
 @NgModule({
     declarations: [
         DomSanitizerImagePipe,
+        GendersPipe
     ],
     exports: [
-        DomSanitizerImagePipe
+        DomSanitizerImagePipe,
+        GendersPipe
     ],
     imports: [
         CommonModule,

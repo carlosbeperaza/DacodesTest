@@ -36,9 +36,7 @@
             <ion-col size="12" class="ion-text-center">
                 <ion-label>
                     <h2><strong>{{ 'Géneros:' }}</strong></h2>
-                    <div *ngFor="let gens of movieDetail.genres">
-                        {{ gens.name }}
-                    </div>
+                    <h4>{{ movieDetail.genres | gendersPipe }} </h4>
                 </ion-label>
             </ion-col>
             <ion-col size="12" class="ion-text-center">
